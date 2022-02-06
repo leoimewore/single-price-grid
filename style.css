@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* Use display flex to center grid container on the view port */
 body {
     display: flex;
     justify-content: center;
@@ -14,33 +15,22 @@ body {
     /* outline: 5px dashed black; */
     /* height: 1.5em; */
     font-family:'Karla', sans-serif;
-    width:100%;
+    width: 100%;
     font-size: 15px;
     background-color: rgb(241, 239, 239);
-    
-  
-    
-
 }
+
+
+
+
 
 h1 {
     padding-bottom: 1em;
     color: hsl(179, 62%, 43%);
     
 }
-header {
-    grid-column: 1/-1;
-    border:1px solid #fff;
-    background-color:#fff;
-    box-shadow: 0px 10px 25px 15px rgba(17, 17, 17, 0.1)  ;
-    border-top-right-radius: 0.5em;
-    border-top-left-radius: 0.5em;
-    grid-area: top;
-    
-    
-   
-    
-}
+
+
 .head {
     margin:1.5em;
     
@@ -57,6 +47,8 @@ header {
     
 }
 
+/* Initialize  grid container for screens less than 600px*/
+
 
 .container {
     display: grid;
@@ -68,7 +60,19 @@ header {
     /* outline: 1px dashed red; */
    }
 
+   /* Top grid */
+header {
+    grid-column: 1/-1;
+    border:1px solid #fff;
+    background-color:#fff;
+    box-shadow: 0px 10px 25px 15px rgba(17, 17, 17, 0.1)  ;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    grid-area: top;
+}
     
+
+/* Bottom left Grid */
 
 .subscription {
     grid-row-start: 2;
@@ -80,6 +84,8 @@ header {
     grid-area: subs;
    
 }
+
+/* Bottom right grid */
 .info {
     grid-row-start: 2;
     grid-row-end: 3;
@@ -89,6 +95,9 @@ header {
     grid-area: benefits;
     
 }
+
+
+
 h2 {
     margin-top:1em;
     margin-bottom: 1em;
@@ -144,6 +153,7 @@ sup {
     margin-bottom: 2em;
 }
 
+/*  Sign Up Button on the page */
 button {
     background-color:hsl(71, 73%, 54%);
     display: block;
@@ -161,11 +171,16 @@ button {
     opacity: 0.8;
 }
 
+/*  Button hover state */
+
 button:hover {
     background-color: hsl(71, 60%, 81%);
     border: 6px solid hsl(71, 60%, 81%);
     color:#fff ;
 }
+
+
+/* Media query to implement responsiveness and implementing a breakpoint */
 
 
 @media screen and (min-width: 600px) {
