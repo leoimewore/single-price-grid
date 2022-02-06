@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    /* outline: 5px dashed black; */
+    /* height: 1.5em; */
+    font-family:'Karla', sans-serif;
+    width:100%;
+    font-size: 15px;
+    background-color: rgb(241, 239, 239);
+    
+  
+    
+
+}
+
+h1 {
+    padding-bottom: 1em;
+    color: hsl(179, 62%, 43%);
+    
+}
+header {
+    grid-column: 1/-1;
+    border:1px solid #fff;
+    background-color:#fff;
+    box-shadow: 0px 10px 25px 15px rgba(17, 17, 17, 0.1)  ;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    grid-area: top;
+    
+    
+   
+    
+}
+.head {
+    margin:1.5em;
+    
+}
+.join-1 {
+    margin-bottom: 1.5em;
+    color: hsl(71, 73%, 54%);
+    opacity: 0.9;
+    
+}
+.join-2 {
+    color: hsl(205, 8%, 70%);
+    margin-bottom: 0.5em;
+    
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-areas:
+    "top"
+    "subs"
+    "benefits";
+    /* outline: 1px dashed red; */
+   }
+
+    
+
+.subscription {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: 1px solid hsl(179, 62%, 43%) ;
+    background-color: hsl(179, 62%, 43%);
+    /* border-bottom-left-radius: 0.5em; */
+    /* position:relative; */
+    grid-area: subs;
+   
+}
+.info {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column: -2/-1;
+    background-color: hsl(179, 62%, 50%);
+    border:1px solid hsl(179, 62%, 50%);
+    grid-area: benefits;
+    
+}
+h2 {
+    margin-top:1em;
+    margin-bottom: 1em;
+    color: #fff;
+    font-family:'Karla';
+    font-style: normal;
+    font-size: larger;
+    opacity: 0.8;
+    
+
+}
+
+ul {
+    list-style-type: none;
+    padding-bottom: 1em;
+    color:hsl(210, 33%, 99%);
+    opacity: 0.5 ;
+    font-family:'Karla', sans-serif;
+    font-size:small;
+    line-height: 1.5em;
+
+    
+}
+div.services {
+    margin-left: 2em ;
+}
+.price {
+    margin-left: 2em;
+    color:#fff
+}
+
+span.cost {
+    font-size:xx-large;
+    font-family: cursive;
+    margin-right: 0.5em;
+    
+}
+
+sup {
+    color:  hsl(217, 17%, 91%);
+    opacity: 0.9;
+    font-family: 'Karla';
+    font-size:large;
+}
+.price-per-month {
+    margin-bottom:1em;
+   
+}
+.price-per-day {
+    color: hsl(217, 17%, 91%);
+    opacity:0.9;
+
+    margin-bottom: 2em;
+}
+
+button {
+    background-color:hsl(71, 73%, 54%);
+    display: block;
+    margin-right: 7em;
+    margin-left: auto;
+    margin-bottom: 2em;
+    width: 70%;
+    height:2.5em;
+    border: 6px solid hsl(71, 73%, 54%);
+    
+    border-radius: 0.5em;
+    box-shadow: 0px 20px 25px 20px rgba(17, 17, 17, 0.1) ;
+    color:#fff;
+    font-size:large;
+    opacity: 0.8;
+}
+
+button:hover {
+    background-color: hsl(71, 60%, 81%);
+    border: 6px solid hsl(71, 60%, 81%);
+    color:#fff ;
+}
+
+
+@media screen and (min-width: 600px) {
+  .container{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        max-width: 100%;
+        grid-template-areas:
+        "top top"
+        "subs   benefits"
+         
+       }
+       .info{
+           /* border-bottom-right-radius: 0.5em; */
+          
+       }
+
+}
+
+
